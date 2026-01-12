@@ -2,11 +2,10 @@ package com.spring.app.controller;
 
 import com.spring.app.model.entity.Product;
 import com.spring.app.service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +19,10 @@ public class ProductController {
     public ResponseEntity<List<Product>> getAll(){
         return ResponseEntity
                 .ok(this.productService.getAll());
+    }
+
+    @PostMapping
+    public ResponseEntity<Product> create(@Valid @RequestBody ProductRequest productRequest){
+
     }
 }
