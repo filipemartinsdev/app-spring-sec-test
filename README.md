@@ -7,6 +7,6 @@ Essa aplicação é um template de configuração para Autenticação utilizando
 
 ### Arquitetura
 
-![img.png](images/img.png)
+![img_2.png](images/img_2.png)
 
 ![img_1.png](images/img_1.png)
