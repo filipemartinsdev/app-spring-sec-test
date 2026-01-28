@@ -49,7 +49,7 @@ Aplicação com template de configuração para Spring Security para API RESTful
   docker compose up -d --build
   ````
 
-### Arquitetura
+## Arquitetura
 
 ![img_2.png](images/img_2.png)
 
