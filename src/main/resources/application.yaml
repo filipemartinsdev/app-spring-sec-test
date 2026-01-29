@@ -6,6 +6,9 @@ spring:
     name: spring-security-template
   profiles:
     active: prod
+  flyway:
+    enabled: true
+
 api:
   security:
     token:

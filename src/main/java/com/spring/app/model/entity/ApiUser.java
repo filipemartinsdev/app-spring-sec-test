@@ -18,6 +18,7 @@ import java.util.UUID;
 @Entity @Table(name = "api_user")
 @AllArgsConstructor @NoArgsConstructor @Data
 public class ApiUser implements UserDetails {
+
     @Id @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
