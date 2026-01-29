@@ -3,6 +3,11 @@ server:
 
 spring:
   application:
-    name: app-test-spring-sec
+    name: spring-security-template
   profiles:
     active: prod
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:secret}
+      issuer: ${JWT_ISSUER:issuer}

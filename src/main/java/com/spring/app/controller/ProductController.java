@@ -21,8 +21,8 @@ public class ProductController {
                 .ok(this.productService.getAll());
     }
 
-    @PostMapping
-    public ResponseEntity<Product> create(@Valid @RequestBody ProductRequest productRequest){
-
-    }
+//    @PostMapping
+//    public ResponseEntity<Product> create(@Valid @RequestBody ProductRequest productRequest){
+//
+//    }
 }

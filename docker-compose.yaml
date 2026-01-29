@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      -  "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_started
+    restart: unless-stopped
+    environment:
+      - JWT_SECRET
+      - JWT_ISSUER
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/${DB_DATABASE}
+      - SPRING_DATASOURCE_USERNAME=${DB_USER}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+  postgres:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${DB_DATABASE}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+volumes:
+  postgres_data:
