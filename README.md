@@ -1,6 +1,6 @@
 # :closed_lock_with_key: Autenticação com Spring Security
 
-Aplicação com template de configuração para Spring Security para API RESTful.
+Aplicação com template de configuração Spring Security para API RESTful.
 
 ## Tecnologias
 - Java 17
